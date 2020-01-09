@@ -1,0 +1,108 @@
+<div class="container custom-container">
+    <div class="col-md-12">
+      <h3 class="mb-3 text-center">Student Survey</h3>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.first_name" class="form-control" placeholder="First Name">
+      </div>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.last_name" class="form-control" placeholder="Last Name">
+      </div>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.address" class="form-control" placeholder="Address">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.city" class="form-control" placeholder="City">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.state" class="form-control" placeholder="State">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.zipcode" class="form-control" placeholder="Zip Code">
+      </div>
+
+      <div class="form-group">
+        <input type="tel" [(ngModel)]="employeeDetails.phone_number" class="form-control" placeholder="Phone Number">
+      </div>
+
+      <div class="form-group">
+        <input type="email" [(ngModel)]="employeeDetails.email" class="form-control" placeholder="Email">
+      </div>
+      
+      <div class="form-group">
+        <input type="date" [(ngModel)]="employeeDetails.survey_date" class="form-control" placeholder="Survey Date">
+      </div>
+
+      <!--<div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.campus_info" class="form-control" placeholder="Campus Info">
+      </div>--->
+      <div class="form-group">
+        <input type="checkbox" name="campus_info" value="students" checked [(ngModel)]="employeeDetails.campus_info">Students
+        <input type="checkbox" name="campus_info" value="location" id="likecheck">Location
+        <input type="checkbox" name="campus_info" value="campus">Campus
+        <input type="checkbox" name="campus_info" value="atmosphere" >Atmosphere
+        <input type="checkbox" name="campus_info" value="dorm">Dorm Rooms
+        <input type="checkbox" name="campus_info" value="sports">Sports
+      </div>
+
+      <div class="form-group">
+      <input  type="radio" name="info_source" value="friends" id="hearcheck" [(ngModel)]="employeeDetails.selected">Friends
+			<input  type="radio" name="info_source" value="television" > Television
+			<input  type="radio" name="info_source" value="internet" checked > Internet
+      <input  type="radio" name="info_source" value="others" > Other
+      </div> 
+
+      <!--<div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.info_source" class="form-control" placeholder="Info Source">
+      </div>-->
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.recommend" class="form-control" placeholder="Recommend">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.comment" class="form-control" placeholder="Comment">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.raffle" class="form-control" placeholder="Raffle">
+      </div>
+
+      <div class="form-group">
+        <input type="URL" [(ngModel)]="employeeDetails.url" class="form-control" placeholder="URL">
+      </div>
+
+      <!--<div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.grad_month" class="form-control" placeholder="Grad Month">
+      </div>-->
+
+      <div class="form-group">
+        	<input list="Months" name="month"  placeholder="Select Grad-Month" class="datalist" [(ngModel)]="employeeDetails.grad_month">
+				<datalist id="Months">
+					<option value="January"> <option value="Febraury"> <option value="March">
+					<option value="April"> <option value="May"> <option value="June"> 
+					<option value="July"> <option value="August"> <option value="September"> 
+					<option value="October"> <option value="November"> <option value="December">
+        </datalist>
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.grad_year" class="form-control" placeholder="Grad Year">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="employeeDetails.student_id" class="form-control" placeholder="Student ID">
+      </div>
+  
+
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="addEmployee()">Submit</button>
+      </div>
+  
+    </div>
+  </div>

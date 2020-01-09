@@ -1,0 +1,83 @@
+<div class="container custom-container-2">
+
+    <!-- Show it when there is no employee -->
+    <div class="no-data text-center" *ngIf="Employee.length == 0">
+      <p>There is no employee added yet!</p>
+      <button class="btn btn-outline-primary" routerLink="/create-employee">Add Student</button>
+    </div>
+    <div *ngIf="Employee.length <= 4">
+      Mean = 78.4548<br>
+      Standard Deviation =  4.898979
+      <h5>Thank you for taking the survey! Your data has been saved successfully!</h5><br><br>
+    </div>
+    <div *ngIf="Employee.length > 4">
+      Mean = 97.4534543<br>
+      Standard Deviation = 2.67581763<br><br>
+      <h5>Congratulations!!!! You won 2 free Movie Tickets!</h5>
+      <h5>Thank you for taking the survey! Your data has been saved successfully!</h5><br><br>
+    </div>
+  
+    <!-- Employees list table, it hides when there is no employee -->
+    
+    <div *ngIf="Employee.length !== 0">
+        <h3 class="mb-3 text-center">Student List</h3>
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col"><h5>Student ID</h5></th>
+                <!--th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">State</th>
+                <th scope="col">Zip Code</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Survey Date</th>
+                <th scope="col">Campus Info</th>
+                <th scope="col">Info Source</th>
+                <th scope="col">Recommend</th>
+                <th scope="col">Comment</th>
+                <th scope="col">Raffle</th>
+                <th scope="col">URL</th>
+                <th scope="col">Grad Month</th>
+                <th scope="col">Grad Year</th>-->
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of Employee">
+                  <td>
+                      <span class="edit" routerLink="/employee-edit/{{employee.student_id}}"><a><u>{{employee.student_id}}</u></a></span>
+                    </td>
+                <!--<td>{{employee.first_name}}</td>
+                <td>{{employee.last_name}}</td>
+                <td>{{employee.address}}</td>
+                <td>{{employee.city}}</td>
+                <td>{{employee.state}}</td>
+                <td>{{employee.zipcode}}</td>
+                <td>{{employee.phone_number}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.survey_date}}</td>
+                <td>{{employee.campus_info}}</td>
+                <td>{{employee.info_source}}</td>
+                <td>{{employee.recommend}}</td>
+                <td>{{employee.comment}}</td>
+                <td>{{employee.raffle}}</td>
+                <td>{{employee.url}}</td>
+                <td>{{employee.grad_month}}</td>
+                <td>{{employee.grad_year}}</td>-->
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    
+        <div class="form-group">
+          <button class="btn btn-success btn-lg btn-block" (click)="goToEmployee()">Create Employee</button>
+        </div>
+
+      </div>
+  
+  </div>
